@@ -6,7 +6,7 @@ int main(void)
     int a,b,hasil, menu;
     int x, y,z;//variabel untuk membuat fungsi ttg perpangkatan
     int total=1;//variabel untuk membuat fungsi ttg perpangkatan
-    int jawab;
+    int opsilanjut;
     float c, d, hasilbagi; 
         do {
 
@@ -24,7 +24,7 @@ int main(void)
     printf("\t4. Pembagian(:)\n");
     printf("\t5. Modulus(sisa pembagian)\n");
     printf("\t6. Perpangkatan\n");
-    printf("\t7. Keluar");
+    printf("\t0. Keluar");
 
 
     printf("*****************************************************\n");
@@ -108,9 +108,9 @@ int main(void)
     }    
             //break;
 
-        printf("Apakah ingin melanjutkan lagi?\n");   
-        scanf("%d",&jawab);
-    }   while (jawab==7);
+        printf("Apakah ingin melanjutkan lagi, ya(1) dan tidak (0)?\n");   
+        scanf("%d",&opsilanjut);
+    }   while (opsilanjut==1);
     return 0;
       
 }    
