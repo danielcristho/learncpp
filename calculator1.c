@@ -1,5 +1,5 @@
 #include <stdio.h>//tambahkan library
-#include <stdlib.h>//   khususnya untuk operasi matematika yg melibatkan perpangkatan,dll.
+#include <stdlib.h>
  
 int main(void)
 {
