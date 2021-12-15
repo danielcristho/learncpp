@@ -5,8 +5,8 @@
 
 struct AdjListNode
 {
-    int dest;
-    int weight;
+    int Na;
+    int Nb;
     struct AdjListNode* __nextNode__;
 };
 
@@ -24,8 +24,8 @@ struct Graph
 struct AdjListNode* newAdjListNode(int dest, int weight){
     struct AdjListNode* newNode = (struct AdjListNode*)
     malloc(sizeof(struct AdjListNode));
-    newNode->dest = dest;
-    newNode->weight = weight;
+    newNode->Na = dest;
+    newNode->Nb = weight;
     newNode->__nextNode__ = NULL;
     return newNode;
 }
@@ -186,11 +186,11 @@ void dijkstra(struct Graph* graph, int src){
         struct AdjListNode* pCrawl = graph->array[u].top;
         while (pCrawl != NULL)
         {
-            int v = pCrawl->dest;
+            int v = pCrawl->Na;
 
-            if (isInMinHeap(minHeap, v) &&dist[u] != INT_MAX &&pCrawl->weight + dist[u] < dist[v])
+            if (isInMinHeap(minHeap, v) &&dist[u] != INT_MAX &&pCrawl->Nb + dist[u] < dist[v])
             {
-                dist[v] = dist[u] + pCrawl->weight;
+                dist[v] = dist[u] + pCrawl->Nb;
 
                 decreaseKey(minHeap, v, dist[v]);
             }
